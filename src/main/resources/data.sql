@@ -1,0 +1,1 @@
+INSERT INTO TBL_PROFESSOR(nome,email, telefone, genero) VALUES('Emilio','emilio@gmail.com','11952395230','homi');
