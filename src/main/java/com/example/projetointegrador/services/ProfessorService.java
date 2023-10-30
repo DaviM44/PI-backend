@@ -37,22 +37,22 @@ public class ProfessorService {
 
       }
    }
-    public ProfessorResponse save(ProfessorRequest student) {
-    var entity =  this.repository.save(ProfessorMapper.toEntity(student));
+    public ProfessorResponse save(ProfessorRequest professor) {
+    var entity =  this.repository.save(ProfessorMapper.toEntity(professor));
     return ProfessorMapper.toDTO(entity);
    }
 
-   public void update(long id, ProfessorRequest student) {
+   public void update(long id, ProfessorRequest professor) {
       try {
          var updateProfessor= this.repository.getReferenceById(id);
-         updateProfessor.setNome(student.nome());
-         updateProfessor.setEmail(student.email());
-         updateProfessor.setTelefone(student.telefone());
-         updateProfessor.setGenero(student.genero());
+         updateProfessor.setNome(professor.nome());
+         updateProfessor.setEmail(professor.email());
+         updateProfessor.setTelefone(professor.telefone());
+         updateProfessor.setGenero(professor.genero());
 
          this.repository.save(updateProfessor);
       } catch (EntityNotFoundException e) {
-         throw new EntityNotFoundException("Student not found");
+         throw new EntityNotFoundException("Professor not found");
       }
 
    }
