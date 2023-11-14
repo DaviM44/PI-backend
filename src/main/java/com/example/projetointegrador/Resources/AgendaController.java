@@ -17,55 +17,54 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import com.example.projetointegrador.dtos.CursoRequest;
-import com.example.projetointegrador.dtos.CursoResponse;
-import com.example.projetointegrador.mappers.CursoMapper;
-import com.example.projetointegrador.services.CursoService;
-
+import com.example.projetointegrador.dtos.AgendaRequest;
+import com.example.projetointegrador.dtos.AgendaResponse;
+import com.example.projetointegrador.mappers.AgendaMapper;
+import com.example.projetointegrador.services.AgendaService;
 
 @RestController
-@RequestMapping("curso")
+@RequestMapping("agenda")
 @CrossOrigin
-public class CursoController {
+public class AgendaController {
     @Autowired
-    private CursoService service;
+    private AgendaService service;
 
     @GetMapping
-    public ResponseEntity<List<CursoResponse>> getCurso() {
-        var Curso = this.service.getCurso();
-        return ResponseEntity.ok(CursoMapper.toDTOList(Curso));
+    public ResponseEntity<List<AgendaResponse>> getAgenda() {
+        var Agenda= this.service.getAgenda();
+        return ResponseEntity.ok(AgendaMapper.toDTOList(Agenda));
     }
 
     @GetMapping("{id}")
-    public ResponseEntity<CursoResponse> getCurso(@PathVariable long id) {
-        var Curso = this.service.getCurso(id);
-       return ResponseEntity.ok(CursoMapper.toDTO(Curso));
+    public ResponseEntity<AgendaResponse> getAgenda(@PathVariable long id) {
+        var Agenda = this.service.getAgenda(id);
+       return ResponseEntity.ok(AgendaMapper.toDTO(Agenda));
     }
 
     @DeleteMapping("{id}")
-    public ResponseEntity<Void> deleteCurso(@PathVariable long id) {
-     this.service.deleteCursoById(id);
+    public ResponseEntity<Void> deleteAgenda(@PathVariable long id) {
+     this.service.deleteAgendaById(id);
        return ResponseEntity.noContent().build();
     }
 
     @PostMapping
-    public ResponseEntity<CursoResponse> save(@Validated  @RequestBody CursoRequest Curso){
-        var savedCurso = this.service.save(Curso);
+    public ResponseEntity<AgendaResponse> save(@Validated  @RequestBody AgendaRequest Agenda){
+        var savedAgenda = this.service.save(Agenda);
         URI location = ServletUriComponentsBuilder
 
                 .fromCurrentRequest()
 
                 .path("/{id}")
 
-                .buildAndExpand(savedCurso.id())
+                .buildAndExpand(savedAgenda.id())
 
                 .toUri();
-        return ResponseEntity.created(location).body(savedCurso);
+        return ResponseEntity.created(location).body(savedAgenda);
     }
 
     @PutMapping("{id}")
-   public ResponseEntity<Void> update(@PathVariable long id, @Validated @RequestBody CursoRequest Curso){
-    this.service.update(id,Curso);
+   public ResponseEntity<Void> update(@PathVariable long id, @Validated @RequestBody AgendaRequest Agenda){
+    this.service.update(id,Agenda);
         return ResponseEntity.ok().build();
 
     }
