@@ -45,6 +45,8 @@ public class AgendaService {
       try {
          var updateAgenda= this.repository.getReferenceById(id);
          updateAgenda.setDia(agenda.dia());
+         updateAgenda.setDia(agenda.ano());
+         updateAgenda.setDia(agenda.semestre());
          updateAgenda.setPeriodo(Integer.parseInt(agenda.periodo()));
          updateAgenda.setCurso(Integer.parseInt(agenda.curso()));
          updateAgenda.setDisciplina(Integer.parseInt(agenda.disciplina()));

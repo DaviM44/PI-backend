@@ -17,6 +17,10 @@ public class Agenda implements Serializable {
     private Long id;
     @Column(length = 100, nullable = false, name = "dia")
     private String dia;
+    @Column(length = 100, nullable = false, name = "ano")
+    private String ano;
+    @Column(length = 100, nullable = false, name = "semestre")
+    private String semestre;
     @Column(length = 100, nullable = false, name = "periodo")
     private Integer periodo ;
     @Column(length = 100, nullable = false, name = "curso")
@@ -29,6 +33,7 @@ public class Agenda implements Serializable {
     private Integer horario;
     @Column(length = 100, nullable = false, name = "sala")
     private Integer sala;
+
     public Long getId() {
         return id;
     }
@@ -76,6 +81,19 @@ public class Agenda implements Serializable {
     }
     public void setSala(Integer sala) {
         this.sala = sala;
+    }
+    
+    public String getAno() {
+        return ano;
+    }
+    public void setAno(String ano) {
+        this.ano = ano;
+    }
+    public String getSemestre() {
+        return semestre;
+    }
+    public void setSemestre(String semestre) {
+        this.semestre = semestre;
     }
     @Override
     public int hashCode() {

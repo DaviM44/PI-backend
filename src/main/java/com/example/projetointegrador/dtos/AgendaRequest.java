@@ -5,6 +5,10 @@ import jakarta.validation.constraints.NotBlank;
 public record AgendaRequest(
     @NotBlank(message = "O Dia não pode ser em branco")
     String dia,
+    @NotBlank(message = "O Semestre não pode ser em branco")
+    String semestre,
+    @NotBlank(message = "O Ano não pode ser em branco")
+    String ano,
     @NotBlank(message = "O curso não pode ser em branco")
     String curso,
     @NotBlank(message = "O Professor não pode ser em branco")

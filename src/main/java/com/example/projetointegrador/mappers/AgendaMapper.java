@@ -11,6 +11,8 @@ public class AgendaMapper {
     public static Agenda toEntity(AgendaRequest request) {
         Agenda agenda = new Agenda();
         agenda.setDia(request.dia());
+        agenda.setAno(request.ano());
+        agenda.setSemestre(request.semestre());
         agenda.setCurso(Integer.parseInt(request.curso()));
         agenda.setPeriodo(Integer.parseInt(request.periodo()));
         agenda.setDisciplina(Integer.parseInt(request.disciplina()));
@@ -24,7 +26,9 @@ public class AgendaMapper {
         return new AgendaResponse(
             agenda.getId(),
             agenda.getDia(),
-            agenda.getPeriodo(),
+            agenda.getSemestre(),
+            agenda.getAno(),
+            agenda.getCurso(),
             agenda.getDisciplina(),
             agenda.getHorario(),
             agenda.getSala(),
