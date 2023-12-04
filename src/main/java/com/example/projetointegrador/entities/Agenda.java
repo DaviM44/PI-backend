@@ -46,6 +46,18 @@ public class Agenda implements Serializable {
     public void setDia(String dia) {
         this.dia = dia;
     }
+    public String getAno() {
+        return ano;
+    }
+    public void setAno(String ano) {
+        this.ano = ano;
+    }
+    public String getSemestre() {
+        return semestre;
+    }
+    public void setSemestre(String semestre) {
+        this.semestre = semestre;
+    }
     public Integer getPeriodo() {
         return periodo;
     }
@@ -81,19 +93,6 @@ public class Agenda implements Serializable {
     }
     public void setSala(Integer sala) {
         this.sala = sala;
-    }
-    
-    public String getAno() {
-        return ano;
-    }
-    public void setAno(String ano) {
-        this.ano = ano;
-    }
-    public String getSemestre() {
-        return semestre;
-    }
-    public void setSemestre(String semestre) {
-        this.semestre = semestre;
     }
     @Override
     public int hashCode() {
