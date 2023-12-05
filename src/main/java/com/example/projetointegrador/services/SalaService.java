@@ -46,10 +46,8 @@ public class SalaService {
       try {
          var updateSala= this.repository.getReferenceById(id);
          updateSala.setNomedasala(sala.nomedasala());
-         updateSala.setTipo(sala.tipo());
          updateSala.setDescricao(sala.descricao());
          updateSala.setCapacidade(sala.capacidade());
-         updateSala.setNdm(sala.ndm());
 
          this.repository.save(updateSala);
       } catch (EntityNotFoundException e) {

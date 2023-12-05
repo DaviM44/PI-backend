@@ -8,11 +8,7 @@ public record SalaRequest(
     @NotBlank(message = "A capacidade não pode ser em branco")
     String capacidade,
     @NotBlank(message = "A descrição não pode ser em branco")
-    String descricao,
-    @NotBlank(message = "O número de máquinas não pode ser em branco")
-    String ndm,
-    @NotBlank(message = "o tipo da sala não pode ser em branco")
-    String tipo
+    String descricao
 ) {
     
 }

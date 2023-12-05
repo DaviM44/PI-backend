@@ -11,15 +11,13 @@ public class SalaMapper {
     public static Sala toEntity(SalaRequest request) {
         Sala sala = new Sala();
         sala.setNomedasala(request.nomedasala());
-        sala.setTipo(request.tipo());
         sala.setDescricao(request.descricao());
-        sala.setNdm(request.ndm());
         sala.setCapacidade(request.capacidade());
         return sala;
     }
 
     public static SalaResponse toDTO(Sala sala) {
-        return new SalaResponse(sala.getId(), sala.getNomedasala(), sala.getNdm(), sala.getTipo(), sala.getCapacidade(),
+        return new SalaResponse(sala.getId(), sala.getNomedasala(), sala.getCapacidade(),
                 sala.getDescricao());
     }
 

@@ -15,12 +15,8 @@ public class Sala {
     private long Id;
     @Column(length = 100, nullable = false, name = "nomedasala")
     private String nomedasala;
-    @Column(length = 100, nullable = false, name = "tipo")
-    private String tipo;
     @Column(length = 100, nullable = false, name = "capacidade")
     private String capacidade;
-    @Column(length = 100, nullable = false, name = "ndm")
-    private String ndm;
     @Column(length = 100, nullable = false, name = "descricao")
     private String descricao;
     public long getId() {
@@ -35,23 +31,11 @@ public class Sala {
     public void setNomedasala(String nomedasala) {
         this.nomedasala = nomedasala;
     }
-    public String getTipo() {
-        return tipo;
-    }
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
-    }
     public String getCapacidade() {
         return capacidade;
     }
     public void setCapacidade(String capacidade) {
         this.capacidade = capacidade;
-    }
-    public String getNdm() {
-        return ndm;
-    }
-    public void setNdm(String ndm) {
-        this.ndm = ndm;
     }
     public String getDescricao() {
         return descricao;

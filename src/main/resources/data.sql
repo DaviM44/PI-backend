@@ -1,3 +1,8 @@
 INSERT INTO TBL_PROFESSOR(nome,email, telefone, genero) VALUES('Emilio do Bom','emilio@gmail.com','11952395230','homi');
+INSERT INTO TBL_PROFESSOR(nome,email, telefone, genero) VALUES('Leonardo Matemático','leo@gmail.com','222222222','homim');
 INSERT INTO TBL_ADMIN(senha, email) VALUES('11952395230','homi');
-INSERT INTO TBL_SALA(nomedasala,tipo,capacidade,ndm,descricao) VALUES('Laborátorio 6','Laborátorio','85 alunos','30', 'Laborátorio com 30 máquinas e capacidade de 85 alunos');
+INSERT INTO TBL_CURSO(nome, periodo, duracao) VALUES('Marcenaria','Matutino','4');
+INSERT INTO TBL_CURSO(nome, periodo, duracao) VALUES('Apicultura','Tarde','6');
+INSERT INTO TBL_DISCIPLINA(nome, cargahoraria) VALUES('Nutrição','2');
+INSERT INTO TBL_DISCIPLINA(nome, cargahoraria) VALUES('Pilotagem','8');
+INSERT INTO TBL_SALA(nomedasala,capacidade,descricao) VALUES('Laborátorio 6','85 alunos', 'Sala com 30 tomadas e capacidade de 85 alunos');
