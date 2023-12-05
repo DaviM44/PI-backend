@@ -14,7 +14,7 @@ public class Lab {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long Id;
-    @Column(length = 100, nullable = false, name = "nomedasala")
+    @Column(length = 100, nullable = false, name = "nomedolab")
     private String nomedolab;
     @Column(length = 100, nullable = false, name = "capacidade")
     private String capacidade;

@@ -23,7 +23,7 @@ import com.example.projetointegrador.services.LabService;
 
 
 @RestController
-@RequestMapping("sala")
+@RequestMapping("lab")
 @CrossOrigin
 public class LabController {
     @Autowired
