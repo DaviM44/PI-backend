@@ -6,11 +6,11 @@ public record AgendaResponse(
     String semestre,
     String ano,
     Integer curso,
-    Integer professor,
+    String professor,
     Integer sala,
     Integer disciplina,
-    Integer horario,
-    Integer periodo
+    String horario,
+    String periodo
 ) {
     
 }

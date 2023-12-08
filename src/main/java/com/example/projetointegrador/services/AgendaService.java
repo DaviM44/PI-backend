@@ -47,12 +47,12 @@ public class AgendaService {
          updateAgenda.setDia(agenda.dia());
          updateAgenda.setAno(agenda.ano());
          updateAgenda.setSemestre(agenda.semestre());
-         updateAgenda.setPeriodo(Integer.parseInt(agenda.periodo()));
+         updateAgenda.setPeriodo(agenda.periodo());
          updateAgenda.setCurso(Integer.parseInt(agenda.curso()));
          updateAgenda.setDisciplina(Integer.parseInt(agenda.disciplina()));
          updateAgenda.setHorario(Integer.parseInt(agenda.horario()));
          updateAgenda.setSala(Integer.parseInt(agenda.sala()));
-         updateAgenda.setProfessor(Integer.parseInt(agenda.professor()));
+         updateAgenda.setProfessor(agenda.professor());
 
          this.repository.save(updateAgenda);
       } catch (EntityNotFoundException e) {

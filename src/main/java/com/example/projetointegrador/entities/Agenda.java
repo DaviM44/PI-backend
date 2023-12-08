@@ -22,15 +22,15 @@ public class Agenda implements Serializable {
     @Column(length = 100, nullable = false, name = "semestre")
     private String semestre;
     @Column(length = 100, nullable = false, name = "periodo")
-    private Integer periodo ;
+    private String periodo ;
     @Column(length = 100, nullable = false, name = "curso")
     private Integer curso;
     @Column(length = 100, nullable = false, name = "disciplina")
     private Integer disciplina;
     @Column(length = 100, nullable = false, name = "professor")
-    private Integer professor;
+    private String professor;
     @Column(length = 100, nullable = false, name = "horario")
-    private Integer horario;
+    private String horario;
     @Column(length = 100, nullable = false, name = "sala")
     private Integer sala;
 
@@ -58,10 +58,10 @@ public class Agenda implements Serializable {
     public void setSemestre(String semestre) {
         this.semestre = semestre;
     }
-    public Integer getPeriodo() {
+    public String getPeriodo() {
         return periodo;
     }
-    public void setPeriodo(Integer periodo) {
+    public void setPeriodo(String periodo) {
         this.periodo = periodo;
     }
     public Integer getCurso() {
@@ -76,16 +76,16 @@ public class Agenda implements Serializable {
     public void setDisciplina(Integer disciplina) {
         this.disciplina = disciplina;
     }
-    public Integer getProfessor() {
+    public String getProfessor() {
         return professor;
     }
-    public void setProfessor(Integer professor) {
-        this.professor = professor;
+    public void setProfessor(String string) {
+        this.professor = string;
     }
-    public Integer getHorario() {
+    public String getHorario() {
         return horario;
     }
-    public void setHorario(Integer horario) {
+    public void setHorario(String horario) {
         this.horario = horario;
     }
     public Integer getSala() {
