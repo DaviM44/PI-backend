@@ -10,9 +10,9 @@ import com.example.projetointegrador.entities.Sala;
 public class SalaMapper {
     public static Sala toEntity(SalaRequest request) {
         Sala sala = new Sala();
-        sala.setNomedasala(request.nomedasala());
-        sala.setDescricao(request.descricao());
         sala.setCapacidade(request.capacidade());
+        sala.setDescricao(request.descricao());
+        sala.setNomedasala(request.nomedasala());
         return sala;
     }
 

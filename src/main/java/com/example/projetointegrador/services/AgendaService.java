@@ -49,9 +49,9 @@ public class AgendaService {
          updateAgenda.setSemestre(agenda.semestre());
          updateAgenda.setPeriodo(agenda.periodo());
          updateAgenda.setCurso(Integer.parseInt(agenda.curso()));
-         updateAgenda.setDisciplina(Integer.parseInt(agenda.disciplina()));
-         updateAgenda.setHorario(Integer.parseInt(agenda.horario()));
-         updateAgenda.setSala(Integer.parseInt(agenda.sala()));
+         updateAgenda.setDisciplina(agenda.disciplina());
+         updateAgenda.setHorario(agenda.horario());
+         updateAgenda.setSala(agenda.sala());
          updateAgenda.setProfessor(agenda.professor());
 
          this.repository.save(updateAgenda);

@@ -13,12 +13,13 @@ public class AgendaMapper {
         agenda.setDia(request.dia());
         agenda.setAno(request.ano());
         agenda.setSemestre(request.semestre());
-        agenda.setCurso(Integer.parseInt(request.curso()));
+        agenda.setCurso(request.curso());
         agenda.setPeriodo(request.periodo());
-        agenda.setDisciplina(Integer.parseInt(request.disciplina()));
+        agenda.setDisciplina(request.disciplina());
         agenda.setHorario(request.horario());
-        agenda.setSala(Integer.parseInt(request.sala()));
+        agenda.setSala(request.sala());
         agenda.setProfessor(request.professor());
+        agenda.setLab(request.lab());
         return agenda;
     }
 
@@ -30,10 +31,11 @@ public class AgendaMapper {
             agenda.getAno(),
             agenda.getCurso(),
             agenda.getProfessor(),
-            agenda.getDisciplina(),
             agenda.getSala(),
+            agenda.getDisciplina(),
             agenda.getHorario(),
-            agenda.getPeriodo()
+            agenda.getPeriodo(),
+            agenda.getLab()
         );
     }
 

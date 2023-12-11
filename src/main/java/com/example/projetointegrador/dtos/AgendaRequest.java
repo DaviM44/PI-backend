@@ -15,6 +15,8 @@ public record AgendaRequest(
     String professor,
     @NotBlank(message = "A Sala não pode ser em branco")
     String sala,
+    @NotBlank(message = "O lab não pode ser em branco")
+    String lab,
     @NotBlank(message = "A Disciplina não pode ser em branco")
     String disciplina,
     @NotBlank(message = "O período não pode ser em branco")

@@ -5,12 +5,13 @@ public record AgendaResponse(
     String dia,
     String semestre,
     String ano,
-    Integer curso,
+    String curso,
     String professor,
-    Integer sala,
-    Integer disciplina,
+    String sala,
+    String disciplina,
     String horario,
-    String periodo
+    String periodo,
+    String lab
 ) {
     
 }

@@ -24,15 +24,17 @@ public class Agenda implements Serializable {
     @Column(length = 100, nullable = false, name = "periodo")
     private String periodo ;
     @Column(length = 100, nullable = false, name = "curso")
-    private Integer curso;
+    private String curso;
     @Column(length = 100, nullable = false, name = "disciplina")
-    private Integer disciplina;
+    private String disciplina;
     @Column(length = 100, nullable = false, name = "professor")
     private String professor;
     @Column(length = 100, nullable = false, name = "horario")
     private String horario;
     @Column(length = 100, nullable = false, name = "sala")
-    private Integer sala;
+    private String sala;
+    @Column(length = 100, nullable = false, name = "lab")
+    private String lab;
 
     public Long getId() {
         return id;
@@ -64,16 +66,16 @@ public class Agenda implements Serializable {
     public void setPeriodo(String periodo) {
         this.periodo = periodo;
     }
-    public Integer getCurso() {
+    public String getCurso() {
         return curso;
     }
-    public void setCurso(Integer curso) {
+    public void setCurso(String curso) {
         this.curso = curso;
     }
-    public Integer getDisciplina() {
+    public String getDisciplina() {
         return disciplina;
     }
-    public void setDisciplina(Integer disciplina) {
+    public void setDisciplina(String disciplina) {
         this.disciplina = disciplina;
     }
     public String getProfessor() {
@@ -88,12 +90,19 @@ public class Agenda implements Serializable {
     public void setHorario(String horario) {
         this.horario = horario;
     }
-    public Integer getSala() {
+    public String getSala() {
         return sala;
     }
-    public void setSala(Integer sala) {
+    public void setSala(String sala) {
         this.sala = sala;
     }
+    public String getLab() {
+        return lab;
+    }
+    public void setLab(String lab) {
+        this.lab = lab;
+    }
+    
     @Override
     public int hashCode() {
         final int prime = 31;
